@@ -31,10 +31,9 @@ if (task) {
         task.task_name = taskName
         task.completed = taskComplete
 
-        axios.patch(`http://localhost:5000/api/v1/tasks/${_id}`, task)
+        axios.patch(`/api/v1/tasks/${_id}`, task)
             .then(res => {
                 const data = res.data.data
-                console.log(data)
                 if (res.data.success) {
                     dangerAlert.classList.add('d-none')
                     successAlert.classList.remove('d-none')

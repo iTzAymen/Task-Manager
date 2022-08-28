@@ -55,10 +55,9 @@ function showAllTasks(tasks) {
 }
 
 function getAllTasks() {
-    axios.get('http://localhost:5000/api/v1/tasks')
+    axios.get('/api/v1/tasks')
         .then(res => {
             const data = res.data.data
-            console.log(data)
             if (res.data.success) {
                 hideAllTasks()
                 showAllTasks(data)
@@ -74,10 +73,9 @@ function createTask(){
         task_name: inputDOM.value
     }
 
-    axios.post('http://localhost:5000/api/v1/tasks', body)
+    axios.post('/api/v1/tasks', body)
         .then(res => {
             const data = res.data.data
-            console.log(data)
             if (res.data.success) {
                 addOneTask(data)
             }
@@ -89,10 +87,9 @@ function createTask(){
 
 function deleteTask(task){
     const {_id} = task
-    axios.delete(`http://localhost:5000/api/v1/tasks/${_id}`)
+    axios.delete(`/api/v1/tasks/${_id}`)
         .then(res => {
             const data = res.data.data
-            console.log(data)
             if (res.data.success) {
                 getAllTasks()
             }
