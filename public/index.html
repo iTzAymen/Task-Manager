@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-icons.css">
+    <title>Task Manager</title>
+</head>
+
+<body class="bg-light">
+    <div class="container mt-5 p-4 d-flex flex-column align-items-center">
+        <div class="col-12 col-md-8 col-lg-6 p-3 p-md-5 bg-white rounded-4 shadow mx-auto d-flex flex-column align-items-center">
+            <h1 class="h1">Task Manager</h1>
+            <form id="new-task-form" class="input-group mt-3">
+                <input id="new-task-input" name="name" type="text" class="form-control" placeholder="e.g.wash dishes">
+                <button class="btn btn-primary" type="submit" id="button-addon2">Submit</button>
+            </form>
+        </div>
+
+        <div id="tasks-parent" class="col-12 col-md-8 col-lg-6 p-3 p-md-5 bg-white rounded-4 shadow mx-auto d-flex flex-column align-items-center mt-5">
+            <ul class="list-group w-100 border-0">
+                <li class="list-group-item border-0 w-100 my-3">
+                    <div class="w-100 bg-secondary bg-opacity-10 rounded-2 d-flex align-items-center justify-content-center py-2"><i class="bi bi-arrow-clockwise opacity-25"></i></div>
+                </li>
+                <li class="list-group-item border-0 w-100 my-3">
+                    <div class="w-100 bg-secondary bg-opacity-10 rounded-2 d-flex align-items-center justify-content-center py-2"><i class="bi bi-arrow-clockwise opacity-25"></i></div>
+                </li>
+                <li class="list-group-item border-0 w-100 my-3">
+                    <div class="w-100 bg-secondary bg-opacity-10 rounded-2 d-flex align-items-center justify-content-center py-2"><i class="bi bi-arrow-clockwise opacity-25"></i></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./bootstrap.min.js"></script>
+    <script src="./axios.min.js"></script>
+    <script src="./browser-app.js"></script>
+</body>
+
+</html>
